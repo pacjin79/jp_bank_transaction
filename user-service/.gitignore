@@ -1,0 +1,185 @@
+# ============================================================
+# JP Microservices Platform - .gitignore
+# ============================================================
+
+# ============================================================
+# COMPILED OUTPUT & BUILD
+# ============================================================
+build/
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ============================================================
+# GRADLE
+# ============================================================
+.gradle/
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# Gradle wrapper scripts are kept, cache is not
+.gradletasknamecache
+
+# ============================================================
+# SENSITIVE CONFIGURATION - NEVER COMMIT SECRETS
+# ============================================================
+application-local.yml
+application-local.properties
+application-prod.yml
+application-prod.properties
+application-secrets.yml
+application-secrets.properties
+**/resources/application-local.*
+**/resources/application-prod.*
+**/resources/application-secrets.*
+**/resources/bootstrap-local.*
+
+# Environment files
+.env
+.env.local
+.env.prod
+.env.staging
+.env.test
+*.env
+
+# Secrets & credentials
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+*.truststore
+*.pfx
+*.cer
+*.crt
+
+# ============================================================
+# LOGS
+# ============================================================
+logs/
+*.log
+*.log.*
+log/
+spring.log
+
+# ============================================================
+# IDE - INTELLIJ IDEA
+# ============================================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# ============================================================
+# IDE - ECLIPSE
+# ============================================================
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# ============================================================
+# IDE - VS CODE
+# ============================================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# ============================================================
+# IDE - NETBEANS
+# ============================================================
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# ============================================================
+# OPERATING SYSTEM
+# ============================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================
+# SPRING BOOT SPECIFIC
+# ============================================================
+
+# Spring Boot devtools restart trigger
+.reloadtrigger
+
+# Spring Boot fat jar (built artifacts)
+*-SNAPSHOT.jar
+*-RELEASE.jar
+
+# Actuator dump files
+*.hprof
+*.dump
+*.hpf
+
+# ============================================================
+# DOCKER
+# ============================================================
+docker-compose.override.yml
+.docker/
+
+# ============================================================
+# KUBERNETES / HELM
+# ============================================================
+kubeconfig
+*.kubeconfig
+helm/charts/
+*values-prod.yaml
+*values-local.yaml
+
+# ============================================================
+# DATABASE
+# ============================================================
+
+# PostgreSQL dumps
+*.sql.bak
+*.pg
